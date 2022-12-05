@@ -1,6 +1,11 @@
 import pandas as pd
 import json
 import os
+import time
+
+if os.path.isdir("db") == False:
+    os.mkdir("./db")
+    time.sleep(1)
 
 def create_table(json_string):
     "json_string = '{'table_name':['col_1','col_2']}'"
