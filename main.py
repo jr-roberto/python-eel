@@ -1,16 +1,13 @@
 import eel
-import sqlite3
+import db
 
-con = sqlite3.connect("sistema_python.db")
-cur = con.cursor()
-res = cur.execute("SELECT name FROM sqlite_master")
-
-print(res.fetchone())
 
 eel.init("web")
 
 @eel.expose
-def login():
-    return eel.BOTTLE_ROUTES
+def create_table(json_string):
+    "Retorna objeto tabela que foi criada"
+    resposta = db.create_table(json_string=json_string)
+    return resposta
 
 eel.start("index.html")
