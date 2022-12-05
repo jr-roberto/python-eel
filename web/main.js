@@ -50,19 +50,21 @@ function config_tabelas(){
     display.appendChild(displayTitle);
     display.appendChild(btn_home);
 
+    // Previsualização da tabela
+
+
     if (id_fun.id === "nova_Tabela" ){
         displayTitleText.innerHTML = "-- Criando uma nova Tabela --";
         displayTitle.style.background = "#2113cc";
+        btn_home.style.color = "#2113cc";
 
 
-        
     }
 
     if (id_fun.id === "editar_Tabela" ){
         displayTitleText.innerHTML = "-- Editando uma tabela existente --";
         displayTitle.style.background = "#056202";
-
-
+        btn_home.style.color = "#056202";
 
     }
 
